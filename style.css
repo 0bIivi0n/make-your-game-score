@@ -1,0 +1,185 @@
+body {
+    background-color: #f2f2f2;
+}
+
+#canvas {
+    width: 854px;
+    height: 480px;
+    margin: 0 auto;
+    background-image: url("assets/img/watercolor-galaxy-background_79603-2383.avif");
+    background-size: cover;
+    border: solid #cccc 1px;
+    position: relative;
+}
+
+.h-border {
+    height: 10px;
+    width: inherit;
+}
+
+.v-border {
+    height: inherit;
+    width: 10px;
+}
+
+#border-left {
+    background-color: black;
+    position: absolute;
+    top: 0px;
+}
+
+#border-right {
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 850px;
+}
+
+#border-top {
+    background-color: black;
+    position: absolute;
+    top: 0px;
+}
+
+#border-bottom {
+    background-color: black;
+    position: absolute;
+    top: 470px;
+}
+
+
+#player {
+    width: 50px;
+    height: 50px;
+    left: 400px;
+    top: 420px;
+    position: absolute;
+}
+
+#player-img {
+    width: 100%;
+}
+
+#enemy-container {
+    width: 80%;
+    position: relative;
+}
+
+
+.enemy {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    position: absolute;
+}
+
+.enemyImage {
+    width: 100%;
+}
+
+#start-menu {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: inherit;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    text-align: center;
+}
+
+#pause-menu {
+    opacity: 0;
+}
+
+#title {
+    margin-top: 80px;
+    text-align: center;
+    color:yellowgreen;
+    font-size: 3em;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#title-desc {
+    text-align: center;
+    color: greenyellow;
+    position: absolute;
+    top: 200px;
+    left: 375px;
+}
+
+#start-button {
+    font-size: 2em;
+    width: 200px;
+    position: absolute;
+    top: 200px;
+    left: 325px;
+}
+
+#game-over {
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    color: red;
+    position: absolute;
+    top: 100px;
+}
+
+#player-missile {
+    top: 400px;
+    width: 5px;
+    height: 15px;
+    background-color: white;
+    position: absolute;
+}
+
+#enemy-missile {
+    width: 5px;
+    height: 15px;
+    background-color: red;
+    position: absolute;
+}
+
+/* game info */
+
+#game-info {
+    width: 100%;
+    height: 50px;
+    background-color:bisque;
+    text-align: center;
+}
+
+.info {
+    margin-left: 15%;
+}
+
+.button {
+    display: none;
+    width: 10%;
+    height: 25px;
+    margin-left: 45%;
+}
+
+.life {
+    width: 20px;
+    height: 20px;
+    margin-left: 3px;
+    padding-top: 10px;
+}
+
+#grats {
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    color: greenyellow;
+    position: absolute;
+    top: 100px;
+}
+
+#next-level-button {
+    margin-left: 100px;
+}
+
+#try-again-button {
+    position: absolute;
+    top: 100px;
+}
