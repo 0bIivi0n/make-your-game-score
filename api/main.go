@@ -10,11 +10,13 @@ import (
 type UserScore struct {
 	Username string `json:"username"`
 	Score    string `json:"score"`
+	Time     string `json:"time"`
 }
 
 func main() {
 
 	http.Handle("/assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("assets"))))
+	http.Handle("/js/", http.StripPrefix("/js/", http.FileServer(http.Dir("js"))))
 
 	http.HandleFunc("/", getScore)
 
@@ -26,20 +28,23 @@ func main() {
 func getScore(w http.ResponseWriter, r *http.Request) {
 	var username string
 	var score string
+	var time string
 
 	tmpl := template.Must(template.ParseFiles("./index.html"))
 
 	if r.Method == "POST" {
 		username = r.FormValue("username")
-		score = r.FormValue("score")
+		score = r.FormValue("player-score")
+		time = r.FormValue("time-elapsed")
 	}
 
 	var userScore = UserScore{
 		Username: username,
 		Score:    score,
+		Time:     time,
 	}
 
-	tmpl.Execute(w, userScore)
 	fmt.Println(userScore)
+	tmpl.Execute(w, userScore)
 
 }

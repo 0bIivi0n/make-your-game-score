@@ -5,7 +5,7 @@
     <title>Make Your Game</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
 
 <body>
@@ -37,8 +37,8 @@
         <!--Game Over Overlay-->
         <div id="game-over">
             <h1 id="gameover-message">Game Over</h1>
-            <form id="scoreForm">
-                <input type="text" id="username" value="" placeholder="Enter your name" required>
+            <form id="scoreForm" action="/" method="post">
+                <input type="text" id="username" name="username" value="" placeholder="Enter your name" required>
                 <button id="score-button" onclick="recordScore()">Submit score</button>
                 <br><br><br><br><br><br><br>
                 <label class="form-info" for="player-score">Score</label>
