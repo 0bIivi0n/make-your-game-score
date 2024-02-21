@@ -65,6 +65,7 @@ function animate() {
         clearInterval(timer);
         clearInterval(enemyAttackID);
         player.remove();
+        enemyContainer.remove();
         return
     }
 

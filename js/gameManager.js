@@ -10,12 +10,9 @@ document.getElementById("next-level-button").disabled = true;
 document.getElementById("try-again-button").disabled = true;
 
 createEnemyContainer();
-spawnEnemies();
+spawnEnemies(40);
 
 function startGame() {
-
-    minutes = 0;
-    seconds = 0;
 
     if (playerMissileFired) {
         let playerMissile = document.getElementById("player-missile");
@@ -42,6 +39,7 @@ function startGame() {
     nextLevelButton.disabled = true;
 
     console.log("Enemy speed: " + enemySpeed + ", Enemy attack Interval: " + enemyAttackInterval);
+    document.getElementById("username").value = "";
 }
 
 function printStartPage() {
@@ -60,8 +58,9 @@ function printPauseMenu() {
 }
 
 function gameOver() {
-    
-    gameOverPage.style.opacity = "1";
+
+    fillScoreForm();
+    gameOverPage.style.display = "block";
     tryAgainButton.disabled = false;
     
 }

@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Make Your Game</title>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
 
-    <body>
-        <h1 style="text-align: center;">Make Your Game</h1>
-        <div id="canvas">
+<head>
+    <title>Make Your Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
 
-            <!-- Borders -->
-            <div class="h-border" id="border-top"></div>
-            <div class="h-border" id="border-bottom"></div>
-            <div class="v-border" id="border-right"></div>
-            <div class="v-border" id="border-left"></div>
-            <!-- Enemies -->
-            <div id="enemy-wrapper">
+<body>
+    <h1 style="text-align: center;">Make Your Game</h1>
+    <div id="canvas">
 
-            </div>
-            <!-- Player -->
-            <div id="player-zone">
-                <div id="player"><img src="assets/img/player.svg" id="player-img"/></div>
-            </div>
-            <!-- Start Menu Overlay-->
-            <div id="start-menu">
-                <h1 id="title">Space Intruders</h1>
-                <div id="pause-menu">
-                    <h2 id="title-desc">PAUSE</h2>
-                    <p style="color:white"><strong>(p) Resume, (r) Restart</strong></p>
-                </div>
-                <button id="start-button" onclick="startGame()">Start</button>
-            </div>
-            <!--Game Over Overlay-->
-            <div id="game-over">
-                <h1 id="gameover-message">Game Over</h1>
-                <button id="try-again-button" onclick="window.location.reload()">Try Again</button>
-            </div>
-            <!--Congratulations Overlay-->
-            <div id="grats">
-                <h1 id="grats-message">Congratulations</h1>
-                <button id="next-level-button" onclick="setNextLevel()">Next Level</button>
-            </div>
+        <!-- Borders -->
+        <div class="h-border" id="border-top"></div>
+        <div class="h-border" id="border-bottom"></div>
+        <div class="v-border" id="border-right"></div>
+        <div class="v-border" id="border-left"></div>
+        <!-- Enemies -->
+        <div id="enemy-wrapper">
+
         </div>
-        <div id="game-info">
-            <span id="score"><strong>Score: 0</strong></span><span id="health" class="info"><strong>Lives:</strong></span><span id="timer" class="info"><strong>Timer:</strong></span><span id="fps" class="info"><strong>FPS</strong></span>
-            <button class="button" onclick="toggleAnimation(), printPauseMenu()" id="toggle">Pause</button>
-            <button class="button" onclick="window.location.reload()" id="restart">Restart</button>
+        <!-- Player -->
+        <div id="player-zone">
+            <div id="player"><img src="assets/img/player.svg" id="player-img" /></div>
         </div>
-        
+        <!-- Start Menu Overlay-->
+        <div id="start-menu">
+            <h1 id="title">Space Intruders</h1>
+            <div id="pause-menu">
+                <h2 id="title-desc">PAUSE</h2>
+                <p style="color:white"><strong>(p) Resume, (r) Restart</strong></p>
+            </div>
+            <button id="start-button" onclick="startGame()">Start</button>
+        </div>
+        <!--Game Over Overlay-->
+        <div id="game-over">
+            <h1 id="gameover-message">Game Over</h1>
+            <form id="scoreForm">
+                <input type="text" id="username" value="" placeholder="Enter your name" required>
+                <button id="score-button" onclick="recordScore()">Submit score</button>
+                <br><br><br><br><br><br><br>
+                <label class="form-info" for="player-score">Score</label>
+                <input class="scoreform-input" type="text" id="player-score" name="player-score" readonly="readonly">
+                <br><br>
+                <label class="form-info" for="time-elapsed">Time elapsed</label>
+                <input class="scoreform-input" type="text" id="time-elapsed" name="time-elapsed" readonly="readonly">
+            </form>
+            <button id="try-again-button" onclick="window.location.reload()">Try Again</button>
+        </div>
+        <!--Congratulations Overlay-->
+        <div id="grats">
+            <h1 id="grats-message">Congratulations</h1>
+            <button id="next-level-button" onclick="setNextLevel()">Next Level</button>
+        </div>
+    </div>
+    <div id="game-info">
+        <span id="score"><strong>Score: 0</strong></span><span id="health"
+            class="info"><strong>Lives:</strong></span><span id="timer" class="info"><strong>Timer:</strong></span><span
+            id="fps" class="info"><strong>FPS</strong></span>
+        <button class="button" onclick="toggleAnimation(), printPauseMenu()" id="toggle">Pause</button>
+        <button class="button" onclick="window.location.reload()" id="restart">Restart</button>
+    </div>
 
-        <!-- --------js link------- -->
-        <script src="js/nodes.js"></script>
-        <script src="js/player.js"></script>
-        <script src="js/enemy.js"></script>
-        <script src="js/collisions.js"></script>
-        <script src="js/gameLoop.js"></script>
-        <script src="js/gameManager.js"></script>
-    </body>
+
+    <!-- --------js link------- -->
+    <script type="text/javascript" src="js/nodes.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/enemy.js"></script>
+    <script type="text/javascript" src="js/collisions.js"></script>
+    <script type="text/javascript" src="js/gameLoop.js"></script>
+    <script type="text/javascript" src="js/gameManager.js"></script>
+    <script type="text/javascript" src="js/scoreHandler.js"></script>
+</body>
+
 </html>
