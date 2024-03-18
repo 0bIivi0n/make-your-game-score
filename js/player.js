@@ -109,7 +109,7 @@ function movePlayerMissile() {
             playerMissile.remove();
             playerMissileFired = false;
             score += 20;
-            document.getElementById("score").innerHTML = "<strong>Score: " + score + " </strong>";
+            document.getElementById("score").innerHTML = "<strong>Score: " + score + "</strong>";
         }
     });
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Make Your Game</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">Make Your Game</h1>
+    <div id="canvas">
+        <!-- Borders -->
+        <div class="h-border" id="border-top"></div>
+        <div class="h-border" id="border-bottom"></div>
+        <div class="v-border" id="border-right"></div>
+        <div class="v-border" id="border-left"></div>
+
+        <table>
+            <caption>
+                <h2><strong>Best Players</strong></h2>
+            </caption>
+            <thead id="scoreTab">
+                <tr>
+                    <th>Rank</th>
+                    <th>Player</th>
+                    <th>Score</th>
+                    <th>Time</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <!-- <div id="game-info">
+        <span id="score"><strong>Score: 0</strong></span><span id="health"
+            class="info"><strong>Lives:</strong></span><span id="timer" class="info"><strong>Timer:</strong></span><span
+            id="fps" class="info"><strong>FPS</strong></span>
+        <button class="button" onclick="toggleAnimation(), printPauseMenu()" id="toggle">Pause</button>
+        <button class="button" onclick="window.location.reload()" id="restart">Restart</button>
+    </div> -->
+
+
+    <!-- --------js link------- -->
+    <!-- <script type="text/javascript" src="js/nodes.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/enemy.js"></script>
+    <script type="text/javascript" src="js/collisions.js"></script>
+    <script type="text/javascript" src="js/gameLoop.js"></script>
+    <script type="text/javascript" src="js/gameManager.js"></script> -->
+    <script type="text/javascript" src="js/scoreHandler.js"></script>
+    <script type="text/javascript" src="js/scoreBoard.js"></script>
+</body>
+
+</html>

@@ -12,6 +12,17 @@ body {
     position: relative;
 }
 
+table {
+    color: white;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 50px;
+}
+
+th {
+    border: solid white 1px;
+}
+
 .h-border {
     height: 10px;
     width: inherit;
